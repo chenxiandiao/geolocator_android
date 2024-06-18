@@ -91,7 +91,7 @@ class LocationManagerClient implements LocationClient, LocationListener {
         this.locationOptions != null ? this.locationOptions.getAccuracy() : LocationAccuracy.best;
 
     this.currentLocationProvider = getBestProvider(this.locationManager, locationAccuracy);
-    this.currentLocationProvider = "network";
+    // this.currentLocationProvider = "network";
     if (this.currentLocationProvider.trim().isEmpty()) {
       errorCallback.onError(ErrorCodes.locationServicesDisabled);
       return;
